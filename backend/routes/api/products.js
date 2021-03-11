@@ -11,3 +11,14 @@ router.get(
         return res.json(coffeeProducts);
     })
 );
+
+router.get(
+    "/:id",
+    asyncHandler( async(req,res) => {
+        const productId = req.params.id;
+        const individualProduct = Product.findBy(productId);
+        return res.json(individualProduct);
+    })
+);
+
+module.exports = router;
