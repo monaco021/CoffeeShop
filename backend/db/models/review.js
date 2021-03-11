@@ -4,7 +4,6 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
     productId: DataTypes.INTEGER,
     message: DataTypes.TEXT,
-    rating: DataTypes.INTEGER
   }, {});
   Review.associate = function(models) {
     Review.belongsTo(models.User, { foreignKey: "userId" });
