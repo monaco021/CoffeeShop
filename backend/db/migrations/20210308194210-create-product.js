@@ -9,21 +9,27 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        allowNull: false,
+        type: Sequelize.STRING(150)
       },
       brandName: {
-        type: Sequelize.STRING
+        allowNull: false,
+        type: Sequelize.STRING(100)
       },
       roast: {
-        type: Sequelize.STRING
+        allowNull: false,
+        type: Sequelize.STRING(50)
       },
       price: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       imageLink: {
+        allowNull: false,
         type: Sequelize.TEXT
       },
       description: {
+        allowNull: false,
         type: Sequelize.TEXT
       },
       createdAt: {
