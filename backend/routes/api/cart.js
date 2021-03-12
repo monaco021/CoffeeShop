@@ -37,3 +37,5 @@ router.post(
         return res.json(cart);
     })
 );
+
+module.exports = router;
