@@ -1,0 +1,27 @@
+.outer__div_container{
+    width: 100%;
+    background-attachment: absolute;
+    background: url(splash.png);
+    background-size: cover;
+    background-position: top;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .text__h1_container{
+    color: white;
+} */
+
+.inner_div_container {
+    width: 50vh;
+    display: flex;
+    flex-flow: column;
+    padding-left: 300px;
+}
