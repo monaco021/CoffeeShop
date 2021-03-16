@@ -9,7 +9,13 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.TEXT
   }, {});
   Product.associate = function(models) {
-    Product.belongsTo(models.ShoppingCart, {foreignKey: "productId"});
+    const columnMapping2 = {
+      through: 'ShoppingCart',
+      otherKey: 'userId',
+      foreignKey: 'productId',
+    }
+
+    Product.belongsToMany(models.User, columnMapping2);
     Product.hasMany(models.Review, {foreignKey: "productId"});
   };
   return Product;

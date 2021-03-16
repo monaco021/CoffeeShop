@@ -58,7 +58,6 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     User.belongsToMany(models.Product, columnMapping);
-    User.hasOne(models.ShoppingCart, { foreignKey: "userId" });
     User.hasMany(models.Review, { foreignKey: "userId" });
   };
   User.prototype.toSafeObject = function () {
