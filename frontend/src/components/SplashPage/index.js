@@ -9,7 +9,7 @@ function SplashPage () {
                 <h1 className="text__h1_container">Welcome to Revival, <a href="/login">login</a> to find your perfect cup of coffee</h1>
             </div>
         </div>
-    )
+    ) 
 };
 
-export default SplashPage;
+export default SplashPage; 
