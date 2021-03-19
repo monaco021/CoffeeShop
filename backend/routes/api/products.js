@@ -15,9 +15,9 @@ router.get(
 router.get(
     "/:id",
     asyncHandler( async(req,res) => {
-        const productId = req.params.id;
-        const individualProduct = Product.findByPk(productId);
+        const individualProduct = await Product.findByPk(req.params.id);
         return res.json(individualProduct);
+
     })
 );
 

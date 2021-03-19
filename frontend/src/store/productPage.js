@@ -2,13 +2,13 @@ import { fetch } from "./csrf.js"
 
 const LOAD = "product/load"
 
-const loadCoffeeProduct = (coffee) => ({
+const loadCoffeeProduct = (product) => ({
     type: LOAD,
-    coffee
+    product
 });
 
-export const fetchCoffeeDetails = () => async dispatch =>{
-    const res = await fetch("api/products/:id");
+export const fetchCoffeeDetails = (id) => async dispatch =>{
+    const res = await fetch(`api/products/${id}`);
     
     if(res.ok) {
         dispatch(loadCoffeeProduct(res.data));
@@ -19,7 +19,7 @@ export const fetchCoffeeDetails = () => async dispatch =>{
 const CoffeeProductDetailReducer = (state = [], action) => {
     switch(action.type) {
         case LOAD: {
-            return action.coffee
+            return action.product
         }
         default:
         return state;
