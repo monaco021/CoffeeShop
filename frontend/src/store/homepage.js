@@ -15,7 +15,6 @@ export const fetchCoffee = () => async dispatch =>{
     };
 };
 
-
 const CoffeeProductsReducer = (state = [], action) => {
     switch(action.type) {
         case LOAD: {
