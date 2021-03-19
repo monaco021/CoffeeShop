@@ -25,13 +25,13 @@ const ProductListings = () => {
                 {products.map((product) => {
                     return (
                         <div className="homepage_inner__div_container">
-                            <div>
-                                <img className="products__image_container" src={product.imageLink} />
+                            <div key="outerDiv">
+                                <img key={product.imageLink} className="products__image_container" src={product.imageLink} />
                             </div>
-                            <div>
+                            <div key={product.name}>
                                 {product.name}
                             </div>
-                            <div>
+                            <div key={product.price} >
                                 {`$${product.price}`}
                             </div>
                         </div>
