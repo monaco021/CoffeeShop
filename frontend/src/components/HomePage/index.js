@@ -1,8 +1,9 @@
+import React from "react";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchCoffee } from "../../store/homepage"
 //using NavLink so users can click on product and go to its page 
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import plant from "./plant2 (2).jpg"
 import "./homePage.css"
 
