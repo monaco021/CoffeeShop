@@ -8,8 +8,9 @@ const loadCoffeeProduct = (product) => ({
 });
 
 export const fetchCoffeeDetails = (id) => async dispatch =>{
-    const res = await fetch(`api/products/${id}`);
-    
+    console.log("before fetch")
+    const res = await fetch(`/api/products/${id}`);
+    console.log("after fetch")
     if(res.ok) {
         dispatch(loadCoffeeProduct(res.data));
     };

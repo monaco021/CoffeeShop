@@ -30,11 +30,11 @@ function App() {
           <Route path="/" exact>
             <SplashPage />
           </Route>
-          <Route path="/products" exact>
-            <ProductListings />
-          </Route>
-          <Route path="/products/:id" exact>
+          <Route path="/product/:productId" exact>
             <CoffeeDetailsPage />
+          </Route>
+          <Route path="/product" exact>
+            <ProductListings />
           </Route>
         </Switch>
       )}

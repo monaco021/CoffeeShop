@@ -27,7 +27,7 @@ const ProductListings = () => {
                     return (
                         <div className="homepage_inner__div_container">
                             <div key="outerDiv">
-                                <img key={product.imageLink} className="products__image_container" src={product.imageLink} />
+                                <img key={product.imageLink} className="products__image_container" src={product.imageLink} alt="plant" />
                             </div>
                             <div key={product.name}>
                                 {product.name}

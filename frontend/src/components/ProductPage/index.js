@@ -6,11 +6,11 @@ import { fetchCoffeeDetails } from "../../store/productPage";
 
 const CoffeeDetailsPage = () => {
     const dispatch = useDispatch();
-    const {id} = useParams();
+    const { productId } = useParams();
     const details = useSelector((state) => state.productDetails);
 
     useEffect(() => {
-        dispatch(fetchCoffeeDetails(id));
+        dispatch(fetchCoffeeDetails(productId));
     }, [dispatch]);
 
     return(
