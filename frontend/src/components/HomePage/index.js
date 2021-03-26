@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchCoffee } from "../../store/homepage"
 //using NavLink so users can click on product and go to its page 
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import plant from "./plant2 (2).jpg"
 import "./homePage.css"
 
@@ -27,7 +27,9 @@ const ProductListings = () => {
                     return (
                         <div className="homepage_inner__div_container">
                             <div key="outerDiv">
-                                <img key={product.imageLink} className="products__image_container" src={product.imageLink} alt="plant" />
+                                <NavLink key={product.name + 1} to={`/product/${product.id}`} >
+                                    <img key={product.imageLink} className="products__image_container" src={product.imageLink} alt="plant" />
+                                </NavLink>
                             </div>
                             <div key={product.name}>
                                 {product.name}
