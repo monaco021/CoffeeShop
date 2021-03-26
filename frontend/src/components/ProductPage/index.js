@@ -16,6 +16,12 @@ const CoffeeDetailsPage = () => {
     return(
         <div>
             <h1>{details.name}</h1>
+            <div>
+                <img src={details.imageLink} alt="CoffeeImage"/>
+            </div>
+            <h3>{details.description}</h3>
+            <h4>{details.price}</h4>
+            {/* <button onClick={() => dispatch()} ></button> */}
         </div>
     )
 };
