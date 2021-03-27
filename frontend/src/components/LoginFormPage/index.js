@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, NavLink } from "react-router-dom";
 import './LoginForm.css';
 
 function LoginFormPage() {
@@ -12,6 +12,11 @@ function LoginFormPage() {
   const [errors, setErrors] = useState([]);
 
   if (sessionUser) return <Redirect to="/" />;
+
+  const handleDemoSubmit = (e) => {
+    e.preventDefault();
+    return dispatch(sessionActions.login({ credential: "Demo-lition", password: "password" }))
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -49,7 +54,13 @@ function LoginFormPage() {
             required
           />
         </label>
-        <button type="submit">Log In</button>
+        <div className="login__div_btn_container">
+          <button type="submit">Log In</button>
+        </div>
+        <div>
+          <button className="submit" onClick={handleDemoSubmit}>Demo</button>
+        </div>
+        <p>Don't have an account? <NavLink className="submit" to="/signup">Sign Up</NavLink> here.</p>
       </form>
     </div>
   );

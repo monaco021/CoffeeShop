@@ -43,3 +43,7 @@
     height: 4vh;
     border-radius: 10%;
 }
+
+.login__div_btn_container{
+    padding-bottom: 7px;
+}
