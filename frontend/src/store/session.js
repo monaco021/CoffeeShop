@@ -28,6 +28,8 @@ export const restoreUser = () => async (dispatch) => {
   return res;
 };
 
+//user sign up 
+
 export const signup = (user) => async (dispatch) => {
   const { username, email, password } = user;
   const response = await fetch('/api/users', {
